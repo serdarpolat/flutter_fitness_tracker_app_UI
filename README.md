@@ -1,6 +1,7 @@
-# flutter_life_app
-
-A new Flutter project.
+# Screenshots
+# Main Page
+<img src="assets/images/scr1.jpg" width="540" />
+<img src="assets/images/scr2.jpg" width="540" />
 
 ## Getting Started
 
