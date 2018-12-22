@@ -6,7 +6,7 @@ class SleepSection extends StatelessWidget {
     return Column(
       children: <Widget>[
         Padding(
-          padding: const EdgeInsets.fromLTRB(16.0, 12.0, 16.0, 20.0),
+          padding: const EdgeInsets.all(10.0),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -36,7 +36,7 @@ class SleepSection extends StatelessWidget {
             Text(
               '8',
               style: TextStyle(
-                fontSize: 100.0,
+                fontSize: 80.0,
                 fontFamily: 'JosefinSans',
                 color: Colors.black,
               ),
@@ -56,7 +56,7 @@ class SleepSection extends StatelessWidget {
         ),
         Expanded(child: Container()),
         Padding(
-          padding: const EdgeInsets.only(bottom: 16.0),
+          padding: const EdgeInsets.only(bottom: 10.0),
           child: Text(
             'Goal Achieved',
             style: TextStyle(color: Color(0xFFA5A5A5), fontSize: 20.0),

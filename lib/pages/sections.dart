@@ -14,7 +14,7 @@ class Sections extends StatelessWidget {
         elevation: 1.0,
         borderRadius: BorderRadius.circular(10.0),
         child: Container(
-          width: (widthFull - 48.0) / 2.0,
+          width: (widthFull - 30.0) / 2.0,
           height: 220.0,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10.0),

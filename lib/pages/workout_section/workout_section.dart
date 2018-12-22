@@ -21,7 +21,7 @@ class WorkoutSection extends StatelessWidget {
       child: Column(
         children: <Widget>[
           Padding(
-            padding: const EdgeInsets.fromLTRB(16.0, 12.0, 16.0, 0.0),
+            padding: const EdgeInsets.all(10.0),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -32,14 +32,14 @@ class WorkoutSection extends StatelessWidget {
                     Text(
                       'Workout',
                       style: TextStyle(
-                        fontSize: 26.0,
+                        fontSize: 22.0,
                         color: Colors.white,
                       ),
                     ),
                     Text(
                       'Biceps & Triceps',
                       style: TextStyle(
-                        fontSize: 16.0,
+                        fontSize: 14.0,
                         color: Colors.white,
                       ),
                     ),
@@ -48,8 +48,8 @@ class WorkoutSection extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(top: 8.0),
                   child: Container(
-                    width: 30.0,
-                    height: 30.0,
+                    width: 26.0,
+                    height: 26.0,
                     child: Image.asset(
                       'assets/images/dumbbell.png',
                       color: Colors.white,
@@ -63,8 +63,8 @@ class WorkoutSection extends StatelessWidget {
             child: Container(),
           ),
           Container(
-            width: 116.0,
-            height: 116.0,
+            width: 110.0,
+            height: 110.0,
             child: Stack(
               children: [
                 Stack(
@@ -83,12 +83,12 @@ class WorkoutSection extends StatelessWidget {
                         '1:30',
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 50.0,
+                          fontSize: 32.0,
                         ),
                       ),
                     ),
                     Positioned(
-                      bottom: 24.0,
+                      bottom: 22.0,
                                           child: Text(
                         'hours',
                         style: TextStyle(
@@ -103,10 +103,10 @@ class WorkoutSection extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(bottom: 8.0, top: 5.0),
+            padding: const EdgeInsets.only(bottom: 8.0, top: 3.0),
             child: Text(
               'Goal Achieved',
-              style: TextStyle(color: Colors.white, fontSize: 20.0),
+              style: TextStyle(color: Colors.white, fontSize: 16.0),
             ),
           ),
         ],

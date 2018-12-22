@@ -50,7 +50,7 @@ class HeaderInfo extends StatelessWidget {
         break;
     }
     return Padding(
-      padding: const EdgeInsets.only(bottom: 12.0),
+      padding: const EdgeInsets.only(bottom: 6.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
@@ -74,7 +74,9 @@ class HeaderInfo extends StatelessWidget {
             children: <Widget>[
               IconButton(
                 icon: Icon(Icons.arrow_back),
-                onPressed: (){},
+                onPressed: (){
+                  Navigator.pop(context);
+                },
               ),
               Text(sectionTitle, style: TextStyle(fontSize: 24.0),),
             ],

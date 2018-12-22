@@ -22,7 +22,7 @@ class CaloriesSection extends StatelessWidget {
       child: Column(
         children: <Widget>[
           Padding(
-            padding: const EdgeInsets.fromLTRB(16.0, 12.0, 16.0, 20.0),
+            padding: const EdgeInsets.all(10.0),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -48,37 +48,40 @@ class CaloriesSection extends StatelessWidget {
               ],
             ),
           ),
-          Container(
-            width: 130.0,
-            height: 130.0,
-            child: RadialProgressbar(
-              trackColor: Colors.white.withOpacity(0.6),
-              progressPercent: 0.67,
-              progressColor: Colors.white,
-              innerPadding: const EdgeInsets.all(6.0),
-              child: ClipOval(
-                clipper: CircleClipper(),
-                child: Container(
-                  width: 120.0,
-                  height: 120.0,
-                  child: Padding(
-                    padding: const EdgeInsets.only(top: 16.0),
-                    child: Column(
-                      children: <Widget>[
-                        Text(
-                          '3642',
-                          style: TextStyle(
-                            fontSize: 36.0,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                          ),
-                        ),
-                        Text('kcal',
+          Padding(
+            padding: const EdgeInsets.only(top: 8.0),
+            child: Container(
+              width: 130.0,
+              height: 130.0,
+              child: RadialProgressbar(
+                trackColor: Colors.white.withOpacity(0.6),
+                progressPercent: 0.67,
+                progressColor: Colors.white,
+                innerPadding: const EdgeInsets.all(6.0),
+                child: ClipOval(
+                  clipper: CircleClipper(),
+                  child: Container(
+                    width: 120.0,
+                    height: 120.0,
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 16.0),
+                      child: Column(
+                        children: <Widget>[
+                          Text(
+                            '3642',
                             style: TextStyle(
+                              fontSize: 36.0,
+                              fontWeight: FontWeight.bold,
                               color: Colors.white,
-                              fontSize: 20.0,
-                            )),
-                      ],
+                            ),
+                          ),
+                          Text('kcal',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 20.0,
+                              )),
+                        ],
+                      ),
                     ),
                   ),
                 ),

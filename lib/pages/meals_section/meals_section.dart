@@ -22,7 +22,7 @@ class MealsSection extends StatelessWidget {
           title,
           style: TextStyle(
             color: Color(0xFFA5A5A5),
-            fontSize: 15.0,
+            fontSize: 11.0,
           ),
         ),
       ],
@@ -34,44 +34,52 @@ class MealsSection extends StatelessWidget {
     return Column(
       children: <Widget>[
         Padding(
-          padding: const EdgeInsets.fromLTRB(16.0, 12.0, 16.0, 20.0),
+          padding: const EdgeInsets.fromLTRB(10.0, 12.0, 10.0, 20.0),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Text(
                 'Meals',
-                style: TextStyle(fontSize: 26.0),
+                style: TextStyle(fontSize: 24.0),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 8.0),
+                padding: const EdgeInsets.only(top: 4.0),
                 child: Container(
-                  width: 30.0,
-                  height: 30.0,
-                  child: Image.asset('assets/images/tray.png',
-                      color: Color(0xFF1FC700)),
+                  width: 28.0,
+                  height: 28.0,
+                  child: Image.asset(
+                    'assets/images/tray.png',
+                    color: Color(0xFF1FC700),
+                  ),
                 ),
               ),
             ],
           ),
         ),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+          padding: const EdgeInsets.symmetric(horizontal: 10.0),
           child: Row(
             children: <Widget>[
               Row(
                 children: <Widget>[
                   Text(
                     '2',
-                    style:
-                        TextStyle(fontSize: 100.0, fontFamily: 'JosefinSans', color: Color(0xFF1FC700),),
+                    style: TextStyle(
+                      fontSize: 80.0,
+                      fontFamily: 'JosefinSans',
+                      color: Color(0xFF1FC700),
+                    ),
                   ),
                   Padding(
                     padding: const EdgeInsets.only(top: 30.0),
                     child: Text(
                       '/5',
-                      style:
-                          TextStyle(fontSize: 24.0, fontFamily: 'JosefinSans', color: Color(0xFF1FC700),),
+                      style: TextStyle(
+                        fontSize: 22.0,
+                        fontFamily: 'JosefinSans',
+                        color: Color(0xFF1FC700),
+                      ),
                     ),
                   ),
                 ],
@@ -93,12 +101,15 @@ class MealsSection extends StatelessWidget {
         ),
         Expanded(child: Container()),
         Padding(
-          padding: const EdgeInsets.only(bottom: 5.0),
-          child: Column(children: <Widget>[
-            Text('02:19:06', style: TextStyle(color: Color(0xFF1FC700), fontSize: 28.0)),
-            Text('For Next Meal', style: TextStyle(color: Color(0xFFA5A5A5), fontSize: 20.0)),
-          ],)
-        ),
+            padding: const EdgeInsets.only(bottom: 5.0),
+            child: Column(
+              children: <Widget>[
+                Text('02:19:06',
+                    style: TextStyle(color: Color(0xFF1FC700), fontSize: 22.0)),
+                Text('For Next Meal',
+                    style: TextStyle(color: Color(0xFFA5A5A5), fontSize: 16.0)),
+              ],
+            )),
       ],
     );
   }

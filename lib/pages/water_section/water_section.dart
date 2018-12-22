@@ -20,7 +20,7 @@ class WaterSection extends StatelessWidget {
     return Column(
       children: <Widget>[
         Padding(
-          padding: const EdgeInsets.fromLTRB(16.0, 12.0, 16.0, 20.0),
+          padding: const EdgeInsets.all(10.0),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -45,7 +45,7 @@ class WaterSection extends StatelessWidget {
         ),
         Expanded(child: Container()),
         Container(
-          width: (MediaQuery.of(context).size.width - 48.0) / 2.0,
+          width: (MediaQuery.of(context).size.width - 30.0) / 2.0,
           child: Stack(
             overflow: Overflow.visible,
             children: [
@@ -123,7 +123,7 @@ class WaterSection extends StatelessWidget {
                 ),
               ),
               Positioned(
-                bottom: 16.0,
+                bottom: 10.0,
                 left: 16.0,
                 right: 16.0,
                 child: Row(

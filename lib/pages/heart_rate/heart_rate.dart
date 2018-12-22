@@ -6,20 +6,20 @@ class HeartRate extends StatelessWidget {
     return Column(
       children: <Widget>[
         Padding(
-          padding: const EdgeInsets.fromLTRB(16.0, 12.0, 16.0, 0.0),
+          padding: const EdgeInsets.all(10.0),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Text(
                 'Heart Rate',
-                style: TextStyle(fontSize: 26.0),
+                style: TextStyle(fontSize: 20.0),
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 8.0),
                 child: Container(
-                  width: 30.0,
-                  height: 30.0,
+                  width: 24.0,
+                  height: 24.0,
                   child: Image.asset(
                     'assets/images/heart_rate.png',
                     color: Color(0xFFFF0045),
@@ -33,7 +33,7 @@ class HeartRate extends StatelessWidget {
           child: Container(),
         ),
         Container(
-          width: (MediaQuery.of(context).size.width - 48.0) / 2.0,
+          width: (MediaQuery.of(context).size.width - 30.0) / 2.0,
           height: 152.0,
           child: Stack(
             overflow: Overflow.visible,
@@ -80,7 +80,7 @@ class HeartRate extends StatelessWidget {
               ),
               Center(
                 child: Padding(
-                  padding: const EdgeInsets.only(top: 30.0),
+                  padding: const EdgeInsets.only(top: 17.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
@@ -88,7 +88,7 @@ class HeartRate extends StatelessWidget {
                         '129',
                         style: TextStyle(
                           color: Color(0xFFFF0045),
-                          fontSize: 70.0,
+                          fontSize: 66.0,
                           letterSpacing: 1.0,
                         ),
                       ),
