@@ -107,7 +107,7 @@ class _MealsPageState extends State<MealsPage> {
                   color: Color(0xFFEAEAEA),
                   width: MediaQuery.of(context).size.width,
                   child: Padding(
-                    padding: const EdgeInsets.only(top: 5.0, left: 16.0, right: 16.0),
+                    padding: const EdgeInsets.only(top: 5.0, left: 16.0, right: 16.0, bottom: 5.0),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
@@ -132,7 +132,7 @@ class _MealsPageState extends State<MealsPage> {
                   color: Colors.white,
                   width: MediaQuery.of(context).size.width,
                   child: Padding(
-                    padding: const EdgeInsets.only(top: 5.0, left: 16.0, right: 16.0),
+                    padding: const EdgeInsets.only(top: 5.0, left: 16.0, right: 16.0, bottom: 5.0),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
@@ -157,7 +157,7 @@ class _MealsPageState extends State<MealsPage> {
                   color: Color(0xFFEAEAEA),
                   width: MediaQuery.of(context).size.width,
                   child: Padding(
-                    padding: const EdgeInsets.only(top: 5.0, left: 16.0, right: 16.0),
+                    padding: const EdgeInsets.only(top: 5.0, left: 16.0, right: 16.0, bottom: 5.0),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[

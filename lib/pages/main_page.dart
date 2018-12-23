@@ -3,6 +3,7 @@ import 'package:flutter_life_app/pages/calories_section/calories.dart';
 import 'package:flutter_life_app/pages/calories_section/calories_section.dart';
 import 'package:flutter_life_app/pages/header_info.dart';
 import 'package:flutter_life_app/pages/heart_rate/heart_rate.dart';
+import 'package:flutter_life_app/pages/heart_rate/heart_rate_section.dart';
 import 'package:flutter_life_app/pages/meals_section/meals.dart';
 import 'package:flutter_life_app/pages/meals_section/meals_section.dart';
 import 'package:flutter_life_app/pages/sections.dart';
@@ -64,9 +65,14 @@ class MainPageState extends State<MainPage> {
                             child: CaloriesSection(),
                           ),
                         ),
-                        Sections(
-                          widthFull: _widthFull,
-                          child: HeartRate(),
+                        InkWell(
+                          onTap: () {
+                            Navigator.of(context).pushNamed(HeartRatePage.tag);
+                          },
+                          child: Sections(
+                            widthFull: _widthFull,
+                            child: HeartRate(),
+                          ),
                         ),
                       ],
                     ),

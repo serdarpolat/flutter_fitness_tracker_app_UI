@@ -268,7 +268,7 @@ class _CaloriesPageState extends State<CaloriesPage> {
                       ),
                     ),
                     Positioned(
-                      bottom: 20.0,
+                      bottom: 14.0,
                       child: Container(
                         alignment: Alignment.topCenter,
                         width: MediaQuery.of(context).size.width,
@@ -412,7 +412,6 @@ class _CaloriesPageState extends State<CaloriesPage> {
               ),
               Container(
                 width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height/3.33,
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(
@@ -424,10 +423,9 @@ class _CaloriesPageState extends State<CaloriesPage> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Container(
-                      height: (MediaQuery.of(context).size.height/3.33)/5,
                       alignment: Alignment.centerLeft,
                       child: Padding(
-                        padding: const EdgeInsets.only(left:16.0),
+                        padding: const EdgeInsets.only(left:16.0, top: 5.0, bottom: 5.0),
                         child: Text(
                           'Activities',
                           style: TextStyle(fontSize: 18.0),
@@ -436,9 +434,8 @@ class _CaloriesPageState extends State<CaloriesPage> {
                     ),
                     Container(
                       color: Color(0xFFEAEAEA),
-                      height: (MediaQuery.of(context).size.height/3.33)/5,
                       child: Padding(
-                        padding: const EdgeInsets.only(top: 5.0, left: 16.0),
+                        padding: const EdgeInsets.only(top: 5.0, left: 16.0, bottom: 5.0),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: <Widget>[
@@ -470,9 +467,8 @@ class _CaloriesPageState extends State<CaloriesPage> {
                       ),
                     ),
                     Container(
-                      height: (MediaQuery.of(context).size.height/3.33)/5,
                       child: Padding(
-                        padding: const EdgeInsets.only(top: 8.0, left: 16.0),
+                        padding: const EdgeInsets.only(top: 8.0, left: 16.0, bottom: 5.0),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: <Widget>[
@@ -499,9 +495,8 @@ class _CaloriesPageState extends State<CaloriesPage> {
                     ),
                     Container(
                       color: Color(0xFFEAEAEA),
-                      height: (MediaQuery.of(context).size.height/3.33)/5,
                       child: Padding(
-                        padding: const EdgeInsets.only(top: 5.0, left: 16.0),
+                        padding: const EdgeInsets.only(top: 5.0, left: 16.0, bottom: 5.0),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: <Widget>[
@@ -527,9 +522,8 @@ class _CaloriesPageState extends State<CaloriesPage> {
                       ),
                     ),
                     Container(
-                      height: (MediaQuery.of(context).size.height/3.33)/5,
                       child: Padding(
-                        padding: const EdgeInsets.only(top: 5.0, left: 16.0),
+                        padding: const EdgeInsets.only(top: 5.0, left: 16.0, bottom: 5.0),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: <Widget>[
