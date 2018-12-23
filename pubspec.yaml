@@ -53,6 +53,7 @@ flutter:
     - assets/images/scr1.jpg
     - assets/images/scr2.jpg
     - assets/images/calories.jpg
+    - assets/images/meals.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.

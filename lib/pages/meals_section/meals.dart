@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_life_app/pages/header_info.dart';
-import 'dart:math';
-
-import 'package:flutter_life_app/radial_progress.dart';
+import 'package:flutter_life_app/pages/meals_section/meals_card.dart';
 
 class MealsPage extends StatefulWidget {
   static String tag = 'meals-page';
@@ -58,81 +56,20 @@ class _MealsPageState extends State<MealsPage> {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: <Widget>[
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                        child: Container(
-                          width: MediaQuery.of(context).size.width * 0.7,
-                          height: MediaQuery.of(context).size.height * 0.5,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(24.0),
-                            color: Colors.white,
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.only(top: 16.0),
-                            child: Column(
-                              children: <Widget>[
-                                Padding(
-                                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                    children: <Widget>[
-                                      RadialProgressbar(
-                                        trackColor: Color(0xFF65DADE),
-                                        trackWidth: 16.0,
-                                        progressWidth: 24.0,
-                                        progressPercent: 0.25,
-                                        progressColor: Color(0xFFF04D4D),
-                                        innerPadding: const EdgeInsets.all(0.0),
-                                        child: Container(
-                                          width: 90.0,
-                                          height: 90.0,
-                                        ),
-                                      ),
-                                      Column(
-                                        crossAxisAlignment: CrossAxisAlignment.start,
-                                        children: <Widget>[
-                                          Row(
-                                            children: <Widget>[
-                                              Container(
-                                                width: 16.0,
-                                                height: 10.0,
-                                                color: Color(0xFFF04D4D),
-                                              ),
-                                              SizedBox(width: 8.0,),
-                                              Text('Protein', style: TextStyle(color: Colors.grey, fontSize: 16.0)),
-                                            ],
-                                          ),
-                                          Row(
-                                            children: <Widget>[
-                                              Container(
-                                                width: 16.0,
-                                                height: 10.0,
-                                                color: Color(0xFF65DADE),
-                                              ),
-                                              SizedBox(width: 8.0,),
-                                              Text('Carbonhydrates', style: TextStyle(color: Colors.grey, fontSize: 16.0)),
-                                            ],
-                                          ),
-                                          Row(
-                                            children: <Widget>[
-                                              Container(
-                                                width: 16.0,
-                                                height: 10.0,
-                                                color: Color(0xFF6573DE),
-                                              ),
-                                              SizedBox(width: 8.0,),
-                                              Text('Fats', style: TextStyle(color: Colors.grey, fontSize: 16.0)),
-                                            ],
-                                          ),
-                                        ],
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
+                      MealsCard(
+                        mealIndex: 1,
+                      ),
+                      MealsCard(
+                        mealIndex: 2,
+                      ),
+                      MealsCard(
+                        mealIndex: 3,
+                      ),
+                      MealsCard(
+                        mealIndex: 4,
+                      ),
+                      MealsCard(
+                        mealIndex: 5,
                       ),
                     ],
                   ),
@@ -145,7 +82,6 @@ class _MealsPageState extends State<MealsPage> {
           ),
           Container(
             width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height / 3.33,
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.only(
@@ -157,73 +93,61 @@ class _MealsPageState extends State<MealsPage> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Container(
-                  height: (MediaQuery.of(context).size.height / 3.33) / 5,
+                  height: (MediaQuery.of(context).size.height / 3.33) / 4,
                   alignment: Alignment.centerLeft,
                   child: Padding(
                     padding: const EdgeInsets.only(left: 16.0),
                     child: Text(
-                      'Activities',
+                      'Nutritions',
                       style: TextStyle(fontSize: 18.0),
                     ),
                   ),
                 ),
                 Container(
                   color: Color(0xFFEAEAEA),
-                  height: (MediaQuery.of(context).size.height / 3.33) / 5,
+                  width: MediaQuery.of(context).size.width,
                   child: Padding(
-                    padding: const EdgeInsets.only(top: 5.0, left: 16.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    padding: const EdgeInsets.only(top: 5.0, left: 16.0, right: 16.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            Text(
-                              'Gym workout',
-                              style: TextStyle(fontSize: 15.0),
-                            ),
-                            Text(
-                              '1:30 hours, Biceps & Triceps',
-                              style: TextStyle(
-                                fontSize: 12.0,
-                                color: Colors.grey,
-                              ),
-                            ),
-                          ],
+                        Text(
+                          'Apple',
+                          style: TextStyle(fontSize: 15.0),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(right: 16.0),
-                          child: Text(
-                            '-847 kcal',
-                            style: TextStyle(color: Color(0xFFEC6A13)),
-                          ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            _mealNutritions('95', 'kcal'),
+                            _mealNutritions('0 gm', 'Fat'),
+                            _mealNutritions('0 gm', 'Protein'),
+                            _mealNutritions('14 gm', 'carb'),
+                          ],
                         ),
                       ],
                     ),
                   ),
                 ),
                 Container(
-                  height: (MediaQuery.of(context).size.height / 3.33) / 5,
+                  color: Colors.white,
+                  width: MediaQuery.of(context).size.width,
                   child: Padding(
-                    padding: const EdgeInsets.only(top: 8.0, left: 16.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    padding: const EdgeInsets.only(top: 5.0, left: 16.0, right: 16.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            Text('Running', style: TextStyle(fontSize: 15.0)),
-                            Text('5.0 km',
-                                style: TextStyle(
-                                    fontSize: 12.0, color: Colors.grey)),
-                          ],
+                        Text(
+                          'White Bread',
+                          style: TextStyle(fontSize: 15.0),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(right: 16.0),
-                          child: Text(
-                            '-1127 kcal',
-                            style: TextStyle(color: Color(0xFFEC6A13)),
-                          ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            _mealNutritions('70', 'kcal'),
+                            _mealNutritions('1 gm', 'Fat'),
+                            _mealNutritions('4 gm', 'Protein'),
+                            _mealNutritions('11.6 gm', 'carb'),
+                          ],
                         ),
                       ],
                     ),
@@ -231,54 +155,24 @@ class _MealsPageState extends State<MealsPage> {
                 ),
                 Container(
                   color: Color(0xFFEAEAEA),
-                  height: (MediaQuery.of(context).size.height / 3.33) / 5,
+                  width: MediaQuery.of(context).size.width,
                   child: Padding(
-                    padding: const EdgeInsets.only(top: 5.0, left: 16.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    padding: const EdgeInsets.only(top: 5.0, left: 16.0, right: 16.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
+                        Text(
+                          'Eggs',
+                          style: TextStyle(fontSize: 15.0),
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: <Widget>[
-                            Text('Breakfast', style: TextStyle(fontSize: 15.0)),
-                            Text('2 Eggs, White bread, Orange juice',
-                                style: TextStyle(
-                                    fontSize: 12.0, color: Colors.grey)),
+                            _mealNutritions('155', 'kcal'),
+                            _mealNutritions('11 gm', 'Fat'),
+                            _mealNutritions('13 gm', 'Protein'),
+                            _mealNutritions('1.1 gm', 'carb'),
                           ],
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(right: 16.0),
-                          child: Text(
-                            '+768 kcal',
-                            style: TextStyle(color: Color(0xFFEC6A13)),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                Container(
-                  height: (MediaQuery.of(context).size.height / 3.33) / 5,
-                  child: Padding(
-                    padding: const EdgeInsets.only(top: 5.0, left: 16.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: <Widget>[
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            Text('Walk', style: TextStyle(fontSize: 15.0)),
-                            Text('1.2 km',
-                                style: TextStyle(
-                                    fontSize: 12.0, color: Colors.grey)),
-                          ],
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(right: 16.0),
-                          child: Text(
-                            '-142 kcal',
-                            style: TextStyle(color: Color(0xFFEC6A13)),
-                          ),
                         ),
                       ],
                     ),
@@ -289,6 +183,16 @@ class _MealsPageState extends State<MealsPage> {
           ),
         ],
       ),
+    );
+  }
+
+  Widget _mealNutritions(String title, String subTitle) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        Text(title, style: TextStyle(color: Color(0xFF1FC900))),
+        Text(subTitle, style: TextStyle(color: Colors.grey, fontSize: 12.0)),
+      ],
     );
   }
 }
