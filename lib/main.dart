@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_life_app/pages/calories_section/calories.dart';
 import 'package:flutter_life_app/pages/main_page.dart';
+import 'package:flutter_life_app/pages/meals_section/meals.dart';
 
 void main() => runApp(MyApp());
 
@@ -9,6 +10,7 @@ class MyApp extends StatelessWidget {
   final pages = <String, WidgetBuilder> {
     MainPage.tag: (context)=>MainPage(),
     CaloriesPage.tag: (context)=>CaloriesPage(),
+    MealsPage.tag: (context)=>MealsPage(),
   };
 
   @override

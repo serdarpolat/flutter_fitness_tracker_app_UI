@@ -3,6 +3,7 @@ import 'package:flutter_life_app/pages/calories_section/calories.dart';
 import 'package:flutter_life_app/pages/calories_section/calories_section.dart';
 import 'package:flutter_life_app/pages/header_info.dart';
 import 'package:flutter_life_app/pages/heart_rate/heart_rate.dart';
+import 'package:flutter_life_app/pages/meals_section/meals.dart';
 import 'package:flutter_life_app/pages/meals_section/meals_section.dart';
 import 'package:flutter_life_app/pages/sections.dart';
 import 'package:flutter_life_app/pages/sleep_section/sleep_section.dart';
@@ -74,7 +75,12 @@ class MainPageState extends State<MainPage> {
                       children: <Widget>[
                         Sections(
                           widthFull: _widthFull,
-                          child: MealsSection(),
+                          child: InkWell(
+                            onTap: () {
+                              Navigator.of(context).pushNamed(MealsPage.tag);
+                            },
+                            child: MealsSection(),
+                          ),
                         ),
                         Sections(
                           widthFull: _widthFull,
