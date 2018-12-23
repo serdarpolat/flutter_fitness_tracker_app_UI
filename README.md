@@ -9,6 +9,9 @@
 # Meals Page
 <img src="assets/images/meals.jpg" width="540" />
 
+# Heart Rate Page
+<img src="assets/images/heartrate.jpg" width="540" />
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
