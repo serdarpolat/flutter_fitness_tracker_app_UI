@@ -3,6 +3,9 @@
 <img src="assets/images/scr1.jpg" width="540" />
 <img src="assets/images/scr2.jpg" width="540" />
 
+# Calories Page
+<img src="assets/images/calories.jpg" width="540" />
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
