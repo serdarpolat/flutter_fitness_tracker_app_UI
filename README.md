@@ -6,6 +6,9 @@
 # Calories Page
 <img src="assets/images/calories.jpg" width="540" />
 
+# Meals Page
+<img src="assets/images/meals.jpg" width="540" />
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
